@@ -1,6 +1,14 @@
 import Image from "next/image"
 
-function Project({ key, title, description, src, href }) {
+type ProjectProps = {
+    key: number;
+    title: string;
+    description: string;
+    src: string;
+    href: string;
+}
+
+function Project({ key, title, description, src, href }: ProjectProps) {
     return (
         <a href={href} target="_blank">
             <div className="space-y-8">
